@@ -3,9 +3,16 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session'); // Added
+var passport = require('passport'); // Added
+var methodOverride = require('method-override'); // Added
+
+require('dotenv').config(); // Added
+require('./config/database'); // Added
+require('./config/passport'); // Added
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -18,9 +25,27 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method')); // Added
+
+// Session middleware
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Make user available within every EJS template
+app.use(function(req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
