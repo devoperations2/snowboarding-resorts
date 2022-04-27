@@ -1,9 +1,11 @@
+const resort = require('../models/resort');
 const Resort = require('../models/resort');
 
 module.exports = {
     index,
     new: newResort,
-    create
+    create,
+    show
 };
 
 function index(req, res) {
@@ -24,6 +26,15 @@ function create(req,res) {
         if (err) return res.redirect('/resorts/new')
         res.redirect('/resorts')
     })  
+    
+}
+function show(req,res) {
+  Resort.findById(req.params.id, function(err, resort){
+  res.render('resorts/show', {title: 'Resorts Details', resort })
+
+  
+  })
+
 }
 
 

@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<img src = '<%=resort.photo %>' width = '800px' height = '650px'>
+<p><%= resort.name %> </p>
+<p><%= resort.location %> </p>
+<p><%= resort.elevation %> </p>
+<p><%= resort.description %> </p>
+<p><%= resort.terrain %> </p>
+<h2>Reviews</h2>
+<% if (user) { %>
+  <form id="add-review-form" method="POST" action="/resorts/<%= resort._id %>/reviews">
+    <label>Review:</label>
+    <textarea name="content"></textarea>
+    <label>Rating:</label>
+    <select name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <input type="submit" value="Add Review">
+  </form>
+<% } %>
+<%- include('../partials/footer') %>
