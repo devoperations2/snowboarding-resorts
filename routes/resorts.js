@@ -4,5 +4,7 @@ const resortsCtrl = require('../controllers/resorts');
 const isLoggedIn = require('../config/auth');
 
 router.get('/', resortsCtrl.index);
+router.get('/new', resortsCtrl.new )
+router.post('/', resortsCtrl.create)
 
 module.exports = router;

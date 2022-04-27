@@ -1,21 +1,23 @@
 <%- include('../partials/header') %>
 
 <form id="new-form" action="/resorts" method="POST">
-  <label>Title:</label>
-  <input type="text" name="title">
-  <label>Release Year:</label>
-  <input type="text" name="releaseYear">
-  <label>MPAA Rating</label>
-  <select name="mpaaRating">
-    <option value="G">G</option>
-    <option value="PG">PG</option>
-    <option value="PG-13">PG-13</option>
-    <option value="R">R</option>
+  <label>Name:</label>
+  <input type="text" name="name">
+  <label>Location:</label>
+  <input type="text" name="location">
+  <label>Terrain</label>
+  <select name="terrain">
+    <option value="all mountain">All Mountain</option>
+    <option value="freestyle">Freestyle</option>
+    <option value="alpine">Alpine</option>
+    <option value="backcountry">Backcountry</option>
   </select>
-  <label>Cast (separate actors with commas):</label>
-  <input type="text" name="cast">
-  <label>Now Showing:</label>
-  <input type="checkbox" name="nowShowing" checked>
+  <label>Elevation(in Freestyle):</label>
+  <input type="number" name="elevation">
+  <label>Description:</label>
+  <input type="textarea" name="description">
+  <label>Photo:</label>
+  <input type="text" name="photo">
   <input type="submit" value="Add Resort">
 </form>
 
