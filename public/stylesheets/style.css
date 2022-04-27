@@ -16,7 +16,8 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #ff0000;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVENXDuyROlE2QM31ELdNQuatRf_uyPJC4hw&usqp=CAU');
   display: flex;
   justify-content: flex-end;
   align-items: center;
