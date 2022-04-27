@@ -34,7 +34,7 @@ function create(req, res) {
     // Save the updated resort doc
     resort.save(function(err) {
       // Step 5 says to redirect
-      res.redirect(`/resorts/${req.params.id}`);
+      res.redirect(`/resorts/${resort_id}`);
     });
   });
 }

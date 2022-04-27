@@ -53,5 +53,7 @@ const resortSchema = new Schema({
         required: true,
     },
     reviews: [reviewSchema]
-})
+}, {
+    timestamps: true
+});
 module.exports = mongoose.model('Resort', resortSchema);

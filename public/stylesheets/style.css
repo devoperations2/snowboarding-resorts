@@ -7,13 +7,16 @@
 body {
   margin: 0;
   height: 100vh;
-  
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVENXDuyROlE2QM31ELdNQuatRf_uyPJC4hw&usqp=CAU');
+  background-repeat:no-repeat;
+ 
 }
 
 body > nav {
   grid-area: nav;
-  background-color: #ff0000;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVENXDuyROlE2QM31ELdNQuatRf_uyPJC4hw&usqp=CAU');
+  background-color: #3b41ff;
+  
+ 
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -23,10 +26,8 @@ body > nav {
 nav > img {
   width: 34px;
   object-fit: contain;
-  margin-right: auto;
+  margin-left: auto;
 }
-
-
 
 
 nav > a {
@@ -38,7 +39,7 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: #424748;
+  background-color: #00d5ff;
 }
 
 nav > a.active {
@@ -49,7 +50,15 @@ nav > a.active {
 .resortContainer {
     margin: 3em;
     border: 1px solid black;
+    background-color:rgb(175, 2, 2)
+    radial-gradient
 
 }
+#new-form {
+ background-color: rgb(255, 255, 255); 
+ justify-content: center;   
+}
+
+
 
 
