@@ -5,8 +5,8 @@ const reviewsCtrl = require('../controllers/reviews');
 const isLoggedIn = require('../config/auth');
 
 router.get('/', resortsCtrl.index);
-router.get('/:id',resortsCtrl.show );
 router.get('/new', resortsCtrl.new );
+router.get('/:id',resortsCtrl.show );
 router.post('/', resortsCtrl.create);
 router.get('/:id/edit', resortsCtrl.edit);
 router.put('/:id', resortsCtrl.update);

@@ -13,6 +13,7 @@ require('./config/passport'); // Added
 
 var indexRouter = require('./routes/index');
 var resortsRouter = require('./routes/resorts');
+var reviewsRouter = require('./routes/reviews')
 // var homeRouter = require('./routes/home');
 
 // var usersRouter = require('./routes/users');
@@ -56,6 +57,7 @@ app.use(function(req, res, next) {
 
 app.use('/resorts', resortsRouter);
 app.use('/', indexRouter);
+app.use('/', reviewsRouter);
 
 
 // app.use('/users', usersRouter);

@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const reviewsCtrl = require('../controllers/reviews');
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+const isLoggedIn = require('../config/auth');
+
+router.put('/reviews/:id', isLoggedIn, reviewsCtrl.update)
+router.post('/resorts/:id/reviews', isLoggedIn, reviewsCtrl.create);
+router.delete('/reviews/:id', isLoggedIn, reviewsCtrl.delete);
 
 module.exports = router;
