@@ -3,6 +3,7 @@ const Resort = require('../models/resort');
 module.exports = {
   create,
   delete: deleteReview
+
 };
 
 function deleteReview(req, res, next) {
@@ -34,7 +35,7 @@ function create(req, res) {
     // Save the updated resort doc
     resort.save(function(err) {
       // Step 5 says to redirect
-      res.redirect(`/resorts/${resort_id}`);
+      res.redirect(`/resorts/${resort._id}`);
     });
   });
 }

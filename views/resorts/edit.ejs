@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/resorts/<%=resort._id%>?_method=PUT" method="POST">
+  <label>Name:</label>
+  <input type="text" name="name" value="<%=resort.name%>">
+  <label>Location:</label>
+  <input type="text" name="location" value="<%=resort.location%>">
+  <label>Terrain</label>
+  <select name="terrain">
+    <option value="all mountain">All Mountain</option>
+    <option value="freestyle">Freestyle</option>
+    <option value="alpine">Alpine</option>
+    <option value="backcountry">Backcountry</option>
+  </select>
+  <label>Elevation(in Freestyle):</label>
+  <input type="number" name="elevation" value="<%=resort.elevation%>">
+  <label>Description:</label>
+  <input type="textarea" name="description" value="<%=resort.description%>">
+  <label>Photo:</label>
+  <input type="text" name="photo" value="<%=resort.photo%>">
+  <input type="submit" value="Update Resort">
+</form>
+
+<%- include('../partials/footer') %>

@@ -6,6 +6,9 @@ module.exports = {
   show,
   new: newResort,
   create,
+  edit,
+  update,
+
 };
 
 function index(req, res) {
@@ -30,4 +33,21 @@ function show(req, res) {
   Resort.findById(req.params.id, function (err, resort) {
     res.render("resorts/show", { title: "Resorts Details", resort });
   });
+}
+function edit(req, res) {
+  Resort.findById(req.params.id, function (err, resort){
+  res.render("resorts/edit", { title: "Edit Resort", resort });
+});
+}
+function update(req, res) {
+  Resort.findOneAndUpdate(
+  {_id: req.params.id, user:req.user._id},
+  req.body,
+  {new:true},
+  function(err, resort) {
+    if (err || !resort) return res.redirect('/resorts');
+    res.redirect(`/resorts/${resort._id}`);
+  }
+  );
+
 }

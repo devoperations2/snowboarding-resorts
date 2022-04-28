@@ -58,7 +58,9 @@ nav > a.active {
  background-color: rgb(255, 255, 255); 
  justify-content: center;   
 }
-
+ a {
+   color: black;
+ }
 
 
 

@@ -6,6 +6,8 @@
 <p><%= resort.elevation %> </p>
 <p><%= resort.description %> </p>
 <p><%= resort.terrain %> </p>
+
+<a href="/resorts/<%=resort._id%>/edit">Edit</a>
 <h2>Reviews</h2>
 <% if (user) { %>
   <form id="add-review-form" method="POST" action="/resorts/<%= resort._id %>/reviews">
@@ -20,6 +22,13 @@
       <option value="5">5</option>
     </select>
     <input type="submit" value="Add Review">
+
   </form>
 <% } %>
+
+<% for (var i =0; i < resort.reviews.length;  i++ ) { %>
+  <br/>  <%= resort.reviews[i].content %>    
+  
+  <% } %>
+
 <%- include('../partials/footer') %>
