@@ -1,10 +1,10 @@
 <div align="center">
    <img src="https://th.wallha.com/ts/Oil26ws5.jpg"/>
    <h1> Snowboarding Resorts</h1>
-   <h3><a href="https://github.com/devoperations2/snowboarding-resorts">Submit a Resort!</a></h3>
+   <h3><a href="https://snowboarding-resorts.herokuapp.com/">Submit a Resort!</a></h3>
    <h5>Christopher Hayes</h5>                             
    <a href="[github page]" target="_blank">
-      <img src=""/>
+      <img src="https://github.com/devoperations2/snowboarding-resorts"/>
    </a>
    <a href="https://www.linkedin.com/in/christopher-hayes-59057b164/"><img src="https://img.shields.io/badge/LinkedIn-informational?style=flat&logo=LinkedIn"></a>
    </a> 
@@ -69,7 +69,7 @@
 
 <details open>   
 <summary>Deployed Link (GitHub Pages)</summary>
-<p><a href="https://devoperations2.github.io/Connect-Four/">DEPLOYED LINK</a></p>
+<p><a href="https://snowboarding-resorts.herokuapp.com/">DEPLOYED LINK</a></p>
 </details>
 
 ## :fast_forward: Next Steps   
