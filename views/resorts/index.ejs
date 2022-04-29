@@ -1,9 +1,11 @@
 <%- include('../partials/header') %>
- <h1>Submit a Resort</h1>
+ <h1>Resorts</h1>
  
  <% resorts.forEach(function(r) { %>
  <div class = 'resortContainer'>
- <img src = '<%=r.photo %>' width = '500px' height = '350px'>
+  
+ <img src = '<%=r.photo %>' class="resortsimg" width = '500px' height = '1000px'>
+
  <p><%= r.name %> </p>
  <p><%= r.location %> </p>
  <p><%= r.elevation %> </p>
@@ -13,5 +15,5 @@
  <a href="/resorts/<%= r._id %>">DETAILS</a>
  </div>
 
- <% }); %>
+<% }); %>
 <%- include('../partials/footer') %>

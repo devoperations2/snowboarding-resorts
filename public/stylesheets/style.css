@@ -1,7 +1,8 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  
+
 }
 
 body {
@@ -15,19 +16,37 @@ body {
 body > nav {
   grid-area: nav;
   background-color: #3b41ff;
-  
- 
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
+  border-radius: 50px; 
+  align-items: center;
 }
 
 nav > img {
   width: 34px;
   object-fit: contain;
   margin-left: auto;
+  justify-content: center;
+ 
 }
+h1.intro {
+font-family: 'Seymour One', sans-serif;
+background: blue;
+text-align: center;
+align-items: center;
+border-radius: 20px;
+height: 100px;
+width: 340px;
+alight-items: center; 
+display: flex;
+margin: 100px 60vh;
+border: 2px solid white;
+margin;
+
+}
+
 
 
 nav > a {
@@ -39,7 +58,8 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: white;
-  background-color: #00d5ff;
+  background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+
 }
 
 nav > a.active {
@@ -50,17 +70,50 @@ nav > a.active {
 .resortContainer {
     margin: 3em;
     border: 1px solid black;
-    background-color:rgb(175, 2, 2)
-    
+    background-color:rgb(175, 2, 2);
+    padding: 20px;
+    background: beige;
+    box-shadow: 1px 1px gray;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
 }
-#new-form {
+.new-form {
  background-color: rgb(255, 255, 255); 
- justify-content: center;   
+ justify-content: center; 
+ align-items: center;
+ height: 500px;
+ width: 500px;
+ box-shadow: #00d4ff;            
+   
 }
  a {
    color: black;
+   background: #00d4ff;
  }
 
+.resortsimg {
+height: 350px;
+  
+}
+img  {
+height:15px; 
+
+};
+
+.picturedetails {
+justify-content: center;
+background-color: #3b41ff
+
+};
+.reviewcluster {
+  background-color: #3b41ff
+}
 
 
+.justpic {
+
+  height: 400px;
+}

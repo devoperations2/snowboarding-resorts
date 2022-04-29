@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-
-<img src = '<%=resort.photo %>' width = '800px' height = '650px'>
+<div class="picturedetails">
+<img src = '<%=resort.photo %>' class="justpic" width = '800px' height = '650px'>
 <p><%= resort.name %> </p>
 <p><%= resort.location %> </p>
 <p><%= resort.elevation %> </p>
@@ -8,6 +8,8 @@
 <p><%= resort.terrain %> </p>
 
 <a href="/resorts/<%=resort._id%>/edit">Edit</a>
+</div> 
+<div class="reviewcluster">
 <h2>Reviews</h2>
 <% if (user) { %>
   <form id="add-review-form" method="POST" action="/resorts/<%= resort._id %>/reviews">
@@ -24,6 +26,7 @@
     <input type="submit" value="Add Review">
 
   </form>
+</div>
 <% } %>
 
 <% if (resort.reviews.length) { %>
@@ -70,18 +73,6 @@
 <% } else { %>
   <h5>No Reviews Yet</h5>
 <% } %>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <%- include('../partials/footer') %>
