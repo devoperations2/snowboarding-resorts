@@ -62,8 +62,8 @@
 <details open>
 <summary>An app that tracks the best snowboarding/skiing resorts in the world.</summary>
 <ol>
-<li>Users will submit their favorite snowboarding resort and be able to review and update</li>
-<li> </li>
+<li>Users will submit their favorite snowboarding resort  </li>
+<li>be able to review and update </li>
 </ol>
 </details>
 
@@ -73,10 +73,10 @@
 </details>
 
 ## :fast_forward: Next Steps   
-update diagonal logic 
+fix CSS issues
 
 ### Upcoming Features
-add music
-update CSS   
+add a like feature
+  
 - [ ] Mobile-friendly version
 - [ ] Highlight *only* the winning 4+ in a row
